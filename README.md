@@ -9,10 +9,10 @@ This project implements a **Least Recently Used (LRU) Cache** using **C++**. The
 ## 🚀 Features 
 
 - Stores key-value pairs with a fixed capacity.
-- Automatically evicts the **least recently used** item when full.
-- Provides `get` and `put` operations in **constant time**.
+- Evict the **least recently used** item to make space for the new one.
+- `get` and `put` operations in **constant time**.
 - Uses:
-  - A **hash map** (`unordered_map`) for fast key look-up.
+  - A **hash map** for fast key look-up.
   - A **doubly linked list (DLL)** to track usage order (most recently used at the front).
 
 ---
@@ -24,20 +24,20 @@ This project implements a **Least Recently Used (LRU) Cache** using **C++**. The
   - Stores the actual key-value nodes.
   - Head → Most Recently Used (MRU).
   - Tail → Least Recently Used (LRU).
-  - Two dummy nodes (`head` and `tail`) are used for easy insert/remove operations.
 
 ---
 
 ## 🔧 Functions
 
 ### `LRUCache(int capacity)`
-Initializes the cache with a given capacity.
+- Function for deciding the LRUCache capacity.
+- Declares the dummy head and tail.
 
 ### `int get(int key)`
-Returns the value if the key exists, otherwise returns `-1`. Moves the accessed node to the front (most recently used).
+Return the value of the key if it exists in the cache, otherwise return -1.
 
 ### `void put(int key, int value)`
-Inserts or updates the key-value pair. If the cache exceeds capacity, evicts the least recently used node.
+Update or insert the value. If the cache is full, removes the least recently used item before inserting.
 
 ---
 
