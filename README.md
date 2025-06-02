@@ -56,3 +56,39 @@ int main() {
     cout << lru.get(3) << endl; // Output: 3
     cout << lru.get(4) << endl; // Output: 4
 }
+```
+
+# 🗃️ MyHashMap - C++ Implementation
+
+This project implements a simplified version of a **HashMap (unordered map / dictionary)** from scratch in **C++**, without using any built-in hash table libraries like `unordered_map`, `map`, or `dict`.
+
+The goal is to support the following operations in average-case **O(1)** time:
+
+- `put(key, value)`: Insert or update a key-value pair.
+- `get(key)`: Retrieve the value for a given key.
+- `remove(key)`: Remove the key and its associated value.
+
+---
+
+## 📦 Data Structure Overview
+
+### 🔢 Hash Table Design
+
+- A **fixed-size array** (of size `10000`) is used to simulate buckets in a hash table.
+- Each bucket is a `vector<pair<int, int>>`, i.e., a list of key-value pairs.
+- This handles **collisions** using **separate chaining** via vectors.
+
+### 🧮 Hash Function
+
+```cpp
+ MyHashMap obj;
+    obj.put(1, 10);
+    obj.put(2, 20);
+    cout << obj.get(1) << endl; // 10
+    cout << obj.get(3) << endl; // -1
+    obj.put(2, 30);
+    cout << obj.get(2) << endl; // 30
+    obj.remove(2);
+    cout << obj.get(2) << endl; // -1
+    return 0;
+```
