@@ -60,13 +60,13 @@ int main() {
 
 # 🗃️ MyHashMap - C++ Implementation
 
-This project implements a simplified version of a **HashMap (unordered map / dictionary)** from scratch in **C++**, without using any built-in hash table libraries like `unordered_map`, `map`, or `dict`.
+This project implements a simplified version of a **HashMap** from scratch in **C++**, without using any built-in hash table libraries like `unordered_map`, `map`, or `dict`.
 
 The goal is to support the following operations in average-case **O(1)** time:
 
-- `put(key, value)`: Insert or update a key-value pair.
-- `get(key)`: Retrieve the value for a given key.
-- `remove(key)`: Remove the key and its associated value.
+- `put(key, value)`: Insert or update the value by key.
+- `get(key)`: Return the value associated with the key. If not found, return -1.
+- `remove(key)`: Remove the key from the map.
 
 ---
 
@@ -78,7 +78,23 @@ The goal is to support the following operations in average-case **O(1)** time:
 - Each bucket is a `vector<pair<int, int>>`, i.e., a list of key-value pairs.
 - This handles **collisions** using **separate chaining** via vectors.
 
-### 🧮 Hash Function
+---
+
+### 🧮 Hash Functions
+
+### `void put(int key, int value)`
+- If key is found then value is updated.
+- Else new {key, value} pair is pushed.
+
+### `int get(int key)`
+Return the value of the key if it exists, otherwise return -1.
+
+### `void remove(int key)`
+If key is found then remove its {key, value} pair.
+
+---
+
+## 🧪 Sample Usage
 
 ```cpp
  MyHashMap obj;
