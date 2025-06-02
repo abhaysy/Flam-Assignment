@@ -6,7 +6,7 @@ This project implements a **Least Recently Used (LRU) Cache** using **C++**. The
 
 ---
 
-## 🚀 Features
+## 🚀 Features 
 
 - Stores key-value pairs with a fixed capacity.
 - Automatically evicts the **least recently used** item when full.
@@ -28,7 +28,7 @@ This project implements a **Least Recently Used (LRU) Cache** using **C++**. The
 
 ---
 
-## 🔧 Class API
+## 🔧 Functions
 
 ### `LRUCache(int capacity)`
 Initializes the cache with a given capacity.
