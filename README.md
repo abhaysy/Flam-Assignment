@@ -97,14 +97,18 @@ If key is found then remove its {key, value} pair.
 ## 🧪 Sample Usage
 
 ```cpp
- MyHashMap obj;
-    obj.put(1, 10);
-    obj.put(2, 20);
-    cout << obj.get(1) << endl; // 10
-    cout << obj.get(3) << endl; // -1
-    obj.put(2, 30);
-    cout << obj.get(2) << endl; // 30
-    obj.remove(2);
-    cout << obj.get(2) << endl; // -1
+  
+int main(){
+    MyHashMap obj;
+    obj.put(1, 10);                 // Inserts key 1 with value 10
+    obj.put(2, 20);                 // Inserts key 2 with value 20
+    cout << obj.get(1) << endl;    // Output: 10 (key 1 exists)
+    cout << obj.get(3) << endl;    // Output: -1 (key 3 does not exist)
+    obj.put(2, 30);                // Updates value of key 2 to 30
+    cout << obj.get(2) << endl;    // Output: 30 (updated value)
+    obj.remove(2);                 // Removes key 2
+    cout << obj.get(2) << endl;    // Output: -1 (key 2 has been removed)
     return 0;
+}
+
 ```
