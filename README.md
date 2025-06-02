@@ -112,3 +112,27 @@ int main(){
 }
 
 ```
+# 🌌 OpenGL Solar System Visualization
+
+This project is a real-time 3D solar system simulation using modern OpenGL (3.0+), built in C++. It demonstrates knowledge of shaders, transformations, camera control, and performance optimization.
+
+---
+
+## 🚀 Features
+
+### 🌞 Celestial Bodies
+
+- **Sun**: Glowing center of the system with a custom shader-based pulsing effect.
+- **Planets**:
+  - Two orbiting planets with different radii and angular velocities.
+  - Each planet rotates on its own axis.
+- **Moon**:
+  - Orbits one of the planets in real time (hierarchical modeling).
+
+---
+
+## demo
+
+
+
+
